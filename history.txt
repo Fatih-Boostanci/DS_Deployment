@@ -1,0 +1,22 @@
+EC2'ya bildiğimiz sırayla bağlanma işlemi gerçekleştirilmeli
+
+EC2 commands:
+    
+1  python - exit()
+2  python3 - exit()
+3  sudo yum install git
+4  pip3 install -r requirements.txt
+5  python3 grid_search_with_ec2.py
+
+Git-bash commands:
+Note: Gitbashın açık olduğu klasörde pem dosyası ve EC2'ya atılacak diğer dosyalar yer almalı
+
+1. scp -i Grid_Search.pem Advertising.csv ec2-user@3.80.218.70:/home/ec2-user/
+2. scp -i Grid_Search.pem grid_search_with_ec2.py ec2-user@3.80.218.70:/home/ec2-user/
+3. scp -i Grid_Search.pem requirements.txt ec2-user@3.80.218.70:/home/ec2-user/
+Bu şekilde çalıştılacak dosyalar EC2'ya atılır
+
+1. scp -i Grid_Search.pem ec2-user@3.80.218.70:/home/ec2-user/history.txt ~/Desktop/ML-Deployment/EC2_GridSearch/history.txt
+Bu komutlada EC2 içerisindeki dosya lokale çekilebilir.
+
+
